@@ -11,11 +11,20 @@
 Для перемешивания колоды, сначала создается список списков и 36 карт колоды вида [масть очки]. 
 Затем создается список с числами\номерами карты от 1 до 36, далее этот список перемешивается, и по инкременту счетчика последовательно выбирается значение индекса, которое будет соответствовать карте из список списков:
 ```           
- player_cards_list.append(s_cards_list[deck_cards_nums[card_num]])
- card_num = card_num + 1 
+s_cards_list = [['6♠', 6], ['7♠', 7], ['8♠', 8], ['9♠', 9], ['10♠', 10], ['В♠', 2], ['Д♠', 3], ['К♠', 4], ['Т♠', 11],
+                ['6♥', 6], ['7♥', 7], ['8♥', 8], ['9♥', 9], ['10♥', 10], ['В♥', 2], ['Д♥', 3], ['К♥', 4], ['Т♥', 11],
+                ['6♦', 6], ['7♦', 7], ['8♦', 8], ['9♦', 9], ['10♦', 10], ['В♦', 2], ['Д♦', 3], ['К♦', 4], ['Т♦', 11],
+                ['6♣', 6], ['7♣', 7], ['8♣', 8], ['9♣', 9], ['10♣', 10], ['В♣', 2], ['Д♣', 3], ['К♣', 4], ['Т♣', 11]]
+
+deck_cards_nums     = list(range(0, 36)) 
+random.shuffle(deck_cards_nums)
+
+
+player_cards_list.append(s_cards_list[deck_cards_nums[card_num]])
+card_num = card_num + 1 
 ```
 Далее происходит сортировка списка карты игрока\бота где извлекатся числовое значение для подсчета очков и строковое для показа в консоле:
 ```
- cards_digit = [el[1] for el in player_cards_list[0:len(player_cards_list)]]
- cards_names = [el[0] for el in player_cards_list[0:len(player_cards_list)]] 
+cards_digit = [el[1] for el in player_cards_list[0:len(player_cards_list)]]
+cards_names = [el[0] for el in player_cards_list[0:len(player_cards_list)]] 
 ```
