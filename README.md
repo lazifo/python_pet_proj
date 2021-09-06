@@ -3,7 +3,7 @@
 Алгоритм реализует консольную игру в "21".
 
 ### Блок схема алгоритма
-![Блок схема алгоритма](https://github.com/lazifo/python_pet_proj/blob/main/GameDiagram.png)
+![alt text](https://github.com/lazifo/python_pet_proj/blob/main/GameDiagram.png)
 
 ## Функционал
 В консоле игроку предлагается сыграть против бота, можно выбрать взять или отказаться от карты\игры. 
